@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>💻 Coding Academy</h2>
+        <nav>
+            <button onclick="tampil('gallery')">Gallery</button>
+            <button onclick="tampil('pendaftaran')">Pendaftaran</button>
+        </nav>
+    </header>
+
+    <!-- HALAMAN GALLERY -->
+    <section id="gallery">
+        <div class="banner">
+            <h1>Selamat Datang di Coding Academy!</h1>
+            <p>Belajar coding, kembangkan kemampuan, dan ciptakan masa depan.</p>
+            <button onclick="tampil('pendaftaran')">Daftar Sekarang</button>
+        </div>
+
+        <h2 class="judul">Gallery Kegiatan Pelatihan</h2>
+
+        <div class="container">
+            <div class="card">
+                <img src="coding.jpeg" alt="Belajar coding">
+                <h3>Belajar Coding</h3>
+                <p>Peserta mempelajari dasar-dasar pemrograman bersama mentor.</p>
+            </div>
+
+            <div class="card">
+                <img src="diskusi.jpeg" alt="Diskusi tim">
+                <h3>Diskusi Tim</h3>
+                <p>Peserta berdiskusi dan bekerja sama untuk menyelesaikan masalah.</p>
+            </div>
+
+            <div class="card">
+                <img src="projek.jpeg" alt="Membuat proyek">
+                <h3>Membuat Proyek</h3>
+                <p>Peserta membuat proyek sederhana dari materi yang dipelajari.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HALAMAN PENDAFTARAN -->
+    <section id="pendaftaran" style="display:none">
+        <h1 class="judul">Formulir Pendaftaran</h1>
+        <p class="deskripsi">Silakan isi data diri kamu dengan benar.</p>
+
+        <form id="formDaftar">
+            <label>NIK</label>
+            <input type="text" name="nik" placeholder="Masukkan NIK" required>
+
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
+
+            <label>Jenis Kelamin</label>
+            <select name="gender" required>
+                <option value="">-- Pilih jenis kelamin --</option>
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+            </select>
+
+            <label>Nomor HP</label>
+            <input type="tel" name="hp" placeholder="Masukkan nomor HP" required>
+
+            <label>Alamat</label>
+            <textarea name="alamat" placeholder="Masukkan alamat lengkap" required></textarea>
+
+            <label>Bahasa Pemrograman yang Diminati</label>
+            <select name="bahasa" required>
+                <option value="">-- Pilih bahasa --</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>JavaScript</option>
+                <option>C++</option>
+                <option>PHP</option>
+            </select>
+
+            <button type="submit">Simpan Pendaftaran</button>
+        </form>
+
+        <div id="hasil"></div>
+    </section>
+
+    <footer>
+        <p>© 2026 Coding Academy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
